@@ -18,12 +18,6 @@ class UsersController < ApplicationController
     end
   end
 
-
-  def method_name
-  	
-  end
-
-
   private
 
     def user_params

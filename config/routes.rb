@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'foods/new'
+
+  get 'dishes/new'
+
   get 'users/new'
 
   get 'homepage/index'
