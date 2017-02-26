@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170225214022) do
+ActiveRecord::Schema.define(version: 20170226021007) do
+
+  create_table "dishes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.float    "originialPrice"
+    t.float    "reducedPrice"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["description"], name: "index_dishes_on_description", unique: true
+  end
+
+  create_table "foods", force: :cascade do |t|
+    t.string   "name"
+    t.string   "des"
+    t.string   "og"
+    t.string   "new"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_foods_on_name", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
